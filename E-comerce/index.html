@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- or -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="iconecomerce.png">
+    <title>Gigatech</title>
+</head>
+<body>
+
+
+    <header>
+        <a href="index.html" class="logo"><i class='bx bx-microphone'></i>Gigatech</a><!--Logo.-->
+
+        <div id="pesquisa">
+            <input type="text" id="barrapesquisa"  placeholder="Busque aqui">
+        </div><!--Barra de pesquisa.-->
+
+        <ul class="navegação">
+            <li><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="periféricos.html">Periféricos</a></li>
+            <li><a href="notebook.html">Notebooks</a></li>
+
+        </ul><!--Barra de navegação.-->
+
+        
+    </header>
+
+
+    <section class="Início">
+        <div class="img-início">
+
+            <img src="fone-preto.png" class="one" width="700px">
+
+        </div><!--Imagem do início.-->
+
+        <div class="texto-início">
+
+            <h1>Fones <br> Bluetooth </h1>
+            <h5>Nova linha compacta de fones</h5>
+            <a href="#" class="botão">Compre agora!</a>
+
+        </div><!--Texto do início.-->
+    </section><!--Início.-->
+
+    <div class="carrossel">
+
+                <div class="linha">
+                    <li><img src="menor-preto.png" onclick="slider('fone-preto.png')"></li>
+                </div><!--Carrossel primeira imagem.-->
+
+                <div class="linha2">
+                    <li><img src="menor-branco.png" onclick="slider('fone-branco.png')"></li>
+                </div><!--Carrossel segunda imagem.-->
+
+    </div><!--Carrossel de imagens js.-->
+
+    <script>
+        function slider (anything){
+            document.querySelector ('.one') .src = anything;
+        };
+
+       let menu = document.querySelector ('#menu-icon');
+       let navbar = document.querySelector ('.navbar');
+
+       menu.onclick = () => {
+        menu.classList.toggle ('bx-x');
+        navbar.classList.toggle ('open');
+       }
+    </script><!--JS.-->
+</body>
+</html>

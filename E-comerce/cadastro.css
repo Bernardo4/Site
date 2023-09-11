@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    --bg-color:var(--bg-color) #1d2631;
+    --text-color: #fff;
+    --main-color: #000000;
+    --other-color: #fcfcfc;
+    --h1-font: 4rem;
+    --p-font: 1rem;
+}
+
+body{
+    background-color: #1d2631;
+    color: var(--text-color);
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 8%;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.logo i{
+    color: var(--main-color);
+    font-size: 50px;
+    margin-right: 5px;
+}
+
+.navegação{
+    display: flex;
+}
+.navegação a{
+    color: var(--other-color);
+    font-size: var(--p-font);
+    font-weight: 500;
+    margin: 0 30px;
+    transition: a .55s ease;
+}
+
+.navegação a:hover{
+    color: var(--main-color);
+}
+
+#barrapesquisa{
+    width: 600px;
+    height: 50px;
+    color: var(--main-color);
+    border-radius: 2ch;
+    padding-left: 20px;
+    outline: none;
+}
+
+footer {
+    width: 100%;
+    color: #f5f5f5;
+    margin-top: 1000px;
+}
+
+.link-rodapé {
+    text-decoration: none;
+}
+
+#conteúdo_rodapé {
+    background-color: #171717;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+#redes_rodapé {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+#redes_rodapé .link-rodapé {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: #f5f5f5;
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#redes_rodapé .link-rodapé i {
+    font-size: 1.25rem;
+}
+
+#redes_rodapé .link-rodapé:hover {
+    opacity: 0.7;
+}
+
+#instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#facebook {
+    background-color: #4267b3;
+}
+
+#youtube {
+    background-color: #ff0000;
+}
+
+.lista-rodapé {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.lista-rodapé .rodapé-links {
+    color: #a8a29e;
+}
+
+.lista-rodapé .rodapé-links:hover {
+    color: #7f37c9;
+}
+
+#inscreva-se {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#inscreva-se p {
+    color: #a8a29e;
+
+}
+
+#input_rodapé {
+    display: flex;
+    align-items: center;
+    background-color: #0e0c0c;
+    border-radius: 4px;
+}
+
+#input_rodapé input {
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+#input_rodapé button {
+    background-color: #7f37c9;
+    border: none;
+    color: #f5f5f5;
+    padding: 0px 1.25rem;
+    font-size: 1.125rem;
+    height: 100%;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+#input_rodapé button:hover {
+    opacity: 0.7;
+
+}
+
+#copyright_rodapé {
+    display: flex;
+    justify-content: center;
+    background-color: #171717;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+    #conteúdo_rodapé {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    #conteúdo_rodapé {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
+}
+
+.login{
+    background: rgba(0,0,0.5);
+    border-radius: 5px;
+    width: 400px;
+    padding: 40px;
+    margin-top: -1000px;
+    margin-left: 700px;
+}
+
+.login h2{
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+.login .box-user{
+    position: relative;
+}
+
+.login .box-user input{
+    width: 100%;
+    padding: 10px 0;
+    outline: none;
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.login .box-user label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login .box-user input:focus~label,
+.login .box-user input:valid~label
+{
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+
+.esqueceu{
+    font-size: 12px;
+    color: #5b6b8b;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn{
+    position: relative;
+    display: inline-block;
+    padding: 12px 20px;
+    color: #5b6b8b;
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 700;
+    transition: .5s;
+}
